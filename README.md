@@ -77,7 +77,8 @@ A hardware
  firewall is implemented to safeguard the system from external cyber threats, while a software
  firewall is employed to defend the network from unauthorized access
      
- ## 6. Current IT Challenges
+## 5  Current IT Challenges
+
 Using the IT infrastructure as a guide, let's sum up the company's challenges:
 
 5.1 High Capital Expenditures (CapEx):
@@ -106,24 +107,15 @@ Businesses encounter a major difficulty in keeping security patches and updates 
 
 Server outages or poor performance may go unnoticed for extended periods of time if the monitoring system fails to provide proactive notifications or real-time insights. This could lead to customer annoyance and lost revenue due to the inability to purchase tickets. A non-scalable monitoring system may be overwhelmed by a sudden increase in traffic during well-attended events, resulting in platform slowness or crashes, unpleasant user experiences, and lost revenue as potential buyers abandon their purchases.
 
-6. Impact on Business and Revenue Loss
+## 6. Impact on Business and Revenue Loss
 
 Setting up and maintaining backup and recovery solutions pose challenges for BookShow in terms of complexity and cost. Ensuring data redundancy and availability is crucial but requires
 significant effort and investment to achieve effectively. These tasks are essential for safeguarding data integrity and ensuring uninterrupted service delivery for BookShow's operations.
-Revenue from ticket sales decreases when there are problems with downtime and performance,
- particularly during busy times. The company deals with higher expenses because of large
- capital and operational costs, which affects its financial situation and profit. Customers lose
- trust and loyalty when there is regular downtime and an unsatisfactory user experience on the
- platform. The company's ineffective IT infrastructure puts it at a disadvantage compared to its
- competitors.
- To address these challenges and enhance operational efficiency, we will adopt a strategic
- approach using cloud services, specifically AWS (Amazon Web Services) technology. This
- initiative aims to effectively resolve our existing issues and drive significant improvements.
- Let's take a brief look at what is cloud computing and its benefits, including AWS, and discuss
- the specific AWS services we intend to implement in this project.
+Revenue from ticket sales decreases when there are problems with downtime and performance, particularly during busy times. The company deals with higher expenses because of large capital and operational costs, which affects its financial situation and profit. Customers lose trust and loyalty when there is regular downtime and an unsatisfactory user experience on the platform. The company's ineffective IT infrastructure puts it at a disadvantage compared to its competitors. To address these challenges and enhance operational efficiency, we will adopt a strategic approach using cloud services, specifically AWS (Amazon Web Services) technology. This initiative aims to effectively resolve our existing issues and drive significant improvements. Let's take a brief look at what is cloud computing and its benefits, including AWS, and discuss the specific AWS services we intend to implement in this project.
  
-7. Cloud Computing
-  Cloud computing involves providing computing services such as servers, storage, databases,
+## 7. Cloud Computing
+
+Cloud computing involves providing computing services such as servers, storage, databases,
  networking, software, analytics, and intelligence via the Internet ("the cloud") in order to allow
  for quicker innovation, adaptable resources, and cost-effectiveness. You usually only pay for
 
@@ -169,38 +161,49 @@ type (Amazon Web Services, n.d.).
  
 Amazon CloudWatch provides real-time monitoring for your Amazon Web Services (AWS) resources and applications. You can track and collect metrics, which are measurable variables, and create custom dashboards to display them. Additionally, you can set up alarms and receive notifications or automate actions when certain thresholds are reached. This helps you gain insight into resource utilization, application performance, and operational health (Amazon Web Services, n.d.).
 
-8. Recommended Solutions 8.1 Aspect 1: Web Hosting
+## 8. Recommended Solutions 8.1 Aspect 1: Web Hosting
 
 To address server downtime and scalability issues, our recommendation is to use AWS EC2. Integrating AWS EC2 will enable BookShow to flexibly adjust its computing resources according to fluctuating demand, particularly during peak ticketing periods for popular events. This means that the platform can instantly increase server capacity to handle high user traffic without manual input, ensuring website responsiveness and preventing slowdowns or crashes. Conversely, during low-demand periods, EC2 can reduce resources to optimize cost efficiency by utilizing only the required capacity. Let's compare AWS EC2 with on-premises servers.
+
  Fig 2: AWS CloudWatch
    
-  Comparative Analysis
-  Features
-   AWS EC2
-   On-premises servers
-   Cost Efficiency
- AWS EC2 operates on a pay-as-you- go model, where costs are proportional to actual usage. This eliminates the need for large upfront investments , thereby reducing capital expenditure and optimizing operating expenses.
-   Involve significant CapEx for hardware, software licenses, and ongoing maintenance, contributing to high operational costs.
-   Management and Maintenance
- Managing the server is made easier with AWS EC2, which includes features such as backup, monitoring, and automatic scaling. By doing this, IT teams can focus on strategic initiatives and reduce the operational stress associated with maintenance tasks.
-   Servers located on-premises require manual handling of hardware upgrades, software updates, and problem-solving, which can consume a lot of time and resources, leading to difficulties in monitoring performance and maintenance.
-   Scalability and Flexibility
-AWS EC2 offers dynamic scalability, allowing resources to be easily scaled up or down based on demand. This flexibility is crucial during peak ticketing periods, ensuring that BookShow can handle sudden spikes in traffic without downtime or performance issues.
-  On-premises servers need careful planning and initial investment for capacity, which can lead to over- provisioning when there is less demand and potential resource limitations during busy periods (Hewlett Packard Enterprise, n.d.).
-   Reliability and Availability
- AWS EC2 allows for high availability and reliability by incorporating multi- region redundancy and automatic failover, which reduces the chances of hardware failure or maintenance- related downtime.
-   Local infrastructure is critical for on-premises servers, and there may be a need for extra investments in redundancy and disaster recovery solutions to attain comparable levels of availability.
-   Security and Compliance
-  AWS EC2 provides strong security features and compliance certifications, such as encryption, and routine security audits, to help comply with industry regulations and
-    On-premises servers provide direct control over security measures but require extensive expertise and resources to maintain security patches and updates consistently (Lucidchart, n.d.).
+  - Comparative Analysis
+  - Features
+  - AWS EC2
+  - On-premises servers
+  - Cost Efficiency
+
+AWS EC2 operates on a pay-as-you- go model, where costs are proportional to actual usage. This eliminates the need for large upfront investments , thereby reducing capital expenditure and optimizing operating expenses. Involve significant CapEx for hardware, software licenses, and ongoing maintenance, contributing to high operational costs.
  
-   safeguard sensitive customer data effectively (AWS, n.d.).
+## Management and Maintenance
+
+Managing the server is made easier with AWS EC2, which includes features such as backup, monitoring, and automatic scaling. By doing this, IT teams can focus on strategic initiatives and reduce the operational stress associated with maintenance tasks. Servers located on-premises require manual handling of hardware upgrades, software updates, and problem-solving, which can consume a lot of time and resources, leading to difficulties in monitoring performance and maintenance.
+
+## Scalability and Flexibility
+
+AWS EC2 offers dynamic scalability, allowing resources to be easily scaled up or down based on demand. This flexibility is crucial during peak ticketing periods, ensuring that BookShow can handle sudden spikes in traffic without downtime or performance issues. On-premises servers need careful planning and initial investment for capacity, which can lead to over- provisioning when there is less demand and potential resource limitations during busy periods (Hewlett Packard Enterprise, n.d.).
+
+## Reliability and Availability
+
+AWS EC2 allows for high availability and reliability by incorporating multi- region redundancy and automatic failover, which reduces the chances of hardware failure or maintenance- related downtime. Local infrastructure is critical for on-premises servers, and there may be a need for extra investments in redundancy and disaster recovery solutions to attain comparable levels of availability.
+ 
+## Security and Compliance
+
+AWS EC2 provides strong security features and compliance certifications, such as encryption, and routine security audits, to help comply with industry regulations and On-premises servers provide direct control over security measures but require extensive expertise and resources to maintain security patches and updates consistently (Lucidchart, n.d.).
+ 
+## safeguard sensitive customer data effectively (AWS, n.d.).
+
 8.1.1 Recommendation: AWS Elastic Compute Cloud
+
 8.1.2 Justification: AWS EC2 is recommended for BookShow due to its flexible scalability, pay-as-you-go model, high availability, and strong security. These features enable BookShow to enhance service reliability, optimize costs, and maintain high-security measures, making AWS EC2 the superior choice for supporting their online ticketing platform's performance and growth.
+
 8.2 Aspect 2: Monitoring System
+
 To address the challenge of slow response to server issues and lack of real-time insights, we can implement AWS CloudWatch. Traditional monitoring tools may not check systems often enough, which could cause delays in identifying serious server slowdowns or errors. This can lead to a poor customer experience, especially during busy ticketing periods. For example, they could fail to notice unexpected increases in CPU usage or memory issues until the next planned inspection, affecting the booking process and causing frustration to customers due to slow response times or transaction failures. Let's compare AWS Cloudwatch with a traditional monitoring system.
-      Comparative Analysis
-  Features
+Comparative Analysis
+
+## Features
+
    AWS CloudWatch
    Traditional monitoring system (Nagios, Zabbix)
    Automation and Scalability
