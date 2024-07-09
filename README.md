@@ -127,51 +127,50 @@ Cloud computing involves providing computing services such as servers, storage, 
 6. Dependability: Simplifies data backup, disaster recovery, and business continuity through multiple redundant sites.
 7. Safety: Reinforces overall security posture with comprehensive policies, technologies, and controls (Microsoft Azure, n.d.).
 
-7.2.1 What is AWS EC2?
+7.2 Amazon Web Services:
 
 Amazon Web Services (AWS) offers IT infrastructure services to businesses as web services now commonly known as cloud computing. Amazon Web Services provides a wide range of cloud-based products worldwide. These include various services such as computing, storage, databases, analytics, networking, mobile, developer tools, management tools, IoT, security, and enterprise applications. Users can access these services on demand, in seconds, and with pay-as-you-go pricing. AWS offers over 200 services, covering areas such as data warehousing, deployment tools, directories, and content delivery. Presently, AWS supports a dependable, scalable, and cost-effective cloud infrastructure platform that serves numerous businesses across 190 countries (Amazon Web Services, n.d.).
 
-7.2 Amazon Web Services:
+7.2.1 What is AWS EC2?
 
 Amazon Elastic Compute Cloud (Amazon EC2) is a service provided by Amazon Web Services (AWS) that offers flexible and scalable computing capacity. It helps in minimizing hardware expenses and enables quick development and deployment of applications. Amazon EC2 allows users to launch and manage virtual servers according to their requirements, and adjust capacity to handle varying workloads. Moreover, an EC2 instance refers to a virtual server in the AWS Cloud, with specific hardware configurations based on the chosen instance type (Amazon Web Services, n.d.).
 
+![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/198530fa-1ac9-454b-a214-baffc8098b42)
  Fig 1: AWS EC2
  
  7.2.2 What is AWS CloudWatch?
  
 Amazon CloudWatch provides real-time monitoring for your Amazon Web Services (AWS) resources and applications. You can track and collect metrics, which are measurable variables, and create custom dashboards to display them. Additionally, you can set up alarms and receive notifications or automate actions when certain thresholds are reached. This helps you gain insight into resource utilization, application performance, and operational health (Amazon Web Services, n.d.).
 
-## 8. Recommended Solutions 8.1 Aspect 1: Web Hosting
+![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/0af7da39-93e1-4f04-a51f-487ffb40a157)
+Fig 2: AWS CloudWatch
+
+## 8. Recommended Solutions
+8.1 Aspect 1: Web Hosting
 
 To address server downtime and scalability issues, our recommendation is to use AWS EC2. Integrating AWS EC2 will enable BookShow to flexibly adjust its computing resources according to fluctuating demand, particularly during peak ticketing periods for popular events. This means that the platform can instantly increase server capacity to handle high user traffic without manual input, ensuring website responsiveness and preventing slowdowns or crashes. Conversely, during low-demand periods, EC2 can reduce resources to optimize cost efficiency by utilizing only the required capacity. Let's compare AWS EC2 with on-premises servers.
 
- Fig 2: AWS CloudWatch
+Comparative Analysis :-
+
+Cost Efficiency:
+1. AWS EC2 operates on a pay-as-you-go model, where costs are proportional to actual usage. This eliminates the need for large upfront investments , thereby reducing capital expenditure and optimizing operating expenses.
+2. On Premises ,involve significant CapEx for hardware, software licenses, and ongoing maintenance, contributing to high operational costs.
+
+Management and Maintenance :
+1. Managing the server is made easier with AWS EC2, which includes features such as backup, monitoring, and automatic scaling. By doing this, IT teams can focus on strategic initiatives and reduce the operational stress associated with maintenance tasks.
+2. Servers located on-premises require manual handling of hardware upgrades, software updates, and problem-solving, which can consume a lot of time and resources, leading to difficulties in monitoring performance and maintenance.
    
-  - Comparative Analysis
-  - Features
-  - AWS EC2
-  - On-premises servers
-  - Cost Efficiency
+Scalability and Flexibility: 
+1.AWS EC2 offers dynamic scalability, allowing resources to be easily scaled up or down based on demand. This flexibility is crucial during peak ticketing periods, ensuring that BookShow can handle sudden spikes in traffic without downtime or performance issues.	
+2. On-premises servers need careful planning and initial investment for capacity, which can lead to over-provisioning when there is less demand and potential resource limitations during busy periods (Hewlett Packard Enterprise, n.d.).
 
-AWS EC2 operates on a pay-as-you- go model, where costs are proportional to actual usage. This eliminates the need for large upfront investments , thereby reducing capital expenditure and optimizing operating expenses. Involve significant CapEx for hardware, software licenses, and ongoing maintenance, contributing to high operational costs.
- 
-## Management and Maintenance
-
-Managing the server is made easier with AWS EC2, which includes features such as backup, monitoring, and automatic scaling. By doing this, IT teams can focus on strategic initiatives and reduce the operational stress associated with maintenance tasks. Servers located on-premises require manual handling of hardware upgrades, software updates, and problem-solving, which can consume a lot of time and resources, leading to difficulties in monitoring performance and maintenance.
-
-## Scalability and Flexibility
-
-AWS EC2 offers dynamic scalability, allowing resources to be easily scaled up or down based on demand. This flexibility is crucial during peak ticketing periods, ensuring that BookShow can handle sudden spikes in traffic without downtime or performance issues. On-premises servers need careful planning and initial investment for capacity, which can lead to over- provisioning when there is less demand and potential resource limitations during busy periods (Hewlett Packard Enterprise, n.d.).
-
-## Reliability and Availability
-
-AWS EC2 allows for high availability and reliability by incorporating multi- region redundancy and automatic failover, which reduces the chances of hardware failure or maintenance- related downtime. Local infrastructure is critical for on-premises servers, and there may be a need for extra investments in redundancy and disaster recovery solutions to attain comparable levels of availability.
- 
-## Security and Compliance
-
-AWS EC2 provides strong security features and compliance certifications, such as encryption, and routine security audits, to help comply with industry regulations and On-premises servers provide direct control over security measures but require extensive expertise and resources to maintain security patches and updates consistently (Lucidchart, n.d.).
- 
-## safeguard sensitive customer data effectively (AWS, n.d.).
+Reliability and Availability :
+1. AWS EC2 allows for high availability and reliability by incorporating multi-region redundancy and automatic failover, which reduces the chances of hardware failure or maintenance-related downtime.
+2. Local infrastructure is critical for on-premises servers, and there may be a need for extra investments in redundancy and disaster recovery solutions to attain comparable levels of availability.
+   
+Security and Compliance :
+1. AWS EC2 provides strong security features and compliance certifications, such as encryption, and routine security audits, to help comply with industry regulations and safeguard sensitive customer data effectively (AWS, n.d.).
+2. On-premises servers provide direct control over security measures but require extensive expertise and resources to maintain security patches and updates consistently (Lucidchart, n.d.).
 
 8.1.1 Recommendation: AWS Elastic Compute Cloud
 
