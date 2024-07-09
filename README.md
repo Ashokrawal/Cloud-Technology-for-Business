@@ -160,9 +160,9 @@ To address server downtime and scalability issues, our recommendation is to use 
 **Management and Maintenance:**
 1. Managing the server is made easier with AWS EC2, which includes features such as backup, monitoring, and automatic scaling. By doing this, IT teams can focus on strategic initiatives and reduce the operational stress associated with maintenance tasks.
 2. Servers located on-premises require manual handling of hardware upgrades, software updates, and problem-solving, which can consume a lot of time and resources, leading to difficulties in monitoring performance and maintenance.
-   
+
 **Scalability and Flexibility:**
-1.AWS EC2 offers dynamic scalability, allowing resources to be easily scaled up or down based on demand. This flexibility is crucial during peak ticketing periods, ensuring that BookShow can handle sudden spikes in traffic without downtime or performance issues.	
+1. AWS EC2 offers dynamic scalability, allowing resources to be easily scaled up or down based on demand. This flexibility is crucial during peak ticketing periods, ensring that BookShow can handle sudden spikes in traffic without downtime or performance issues.
 2. On-premises servers need careful planning and initial investment for capacity, which can lead to over-provisioning when there is less demand and potential resource limitations during busy periods (Hewlett Packard Enterprise, n.d.).
 
 **Reliability and Availability:**
@@ -241,6 +241,7 @@ Moving from local infrastructure to AWS can result in around an 82.55% yearly co
 **9.3 Options for Backup**
 
 • AWS Backup: AWS provides automated backup options.
+
 • Note: AWS backup pricing service is temporarily disabled
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/fee86122-72ad-4286-833c-f9b1b379f577)
@@ -250,7 +251,9 @@ Moving from local infrastructure to AWS can result in around an 82.55% yearly co
 **9.4 Monitoring and Management**
 
 • AWS CloudWatch: AWS provides real-time monitoring system.
+
 • Estimated Monthly Costs on Cloud services which includes AWS CloudWatch is approximately $363.45 per month and $4,361.40 Per Annum.
+
   ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/7c9b5d53-5c5c-4217-a0cb-075901d1601d)
              
                   Fig 3: AWS CloudWatch pricing calculator
@@ -325,9 +328,9 @@ The HTML file provides a basic web page that can be viewed in a user browser, en
 
 1.	Once Apache is installed, create a simple HTML file to serve
 2.	Validating Web browser: 
-To verify your web browser, navigate to http://your-ec2-public-ip. 
-Example: http:// 52.87.221.177 
-3.The "Welcome to BookShow! " message should be displayed.
+    To verify your web browser, navigate to http://your-ec2-public-ip. 
+    Example: http:// 52.87.221.177
+3. The "Welcome to BookShow! " message should be displayed.
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/fc1d4eef-ab91-4ffa-9fae-ad789c52256c)
  
