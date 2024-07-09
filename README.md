@@ -11,38 +11,39 @@ BookShow is a prominent entertainment company known for its leading Online Ticke
 BookShow is a medium-sized enterprise with a total of approximately 33 employees. The workforce is structured as follows:
 
 IT Management:
-- 2 IT Managers
-  
+  - 2 IT Managers
+
 Network and Systems Administration:
-- 2 Network Administrators - 4 Systems Administrators
-  
+  - 2 Network Administrators
+  - 4 Systems Administrators
+
 Development Team:
-- 4 Backend Developers - 4 Frontend Developers
-  
+  - 4 Backend Developers
+  - 4 Frontend Developers
+
 IT Support and Maintenance:
-- 3 IT Support Specialists - 4 Help Desk Technicians
-  
+  - 3 IT Support Specialists
+  - 4 Help Desk Technicians
+
 Cloud and Database Management:
-- 1 Cloud Engineer
-- 2 Cloud Solutions Architects - 2 Database Administrators
+  - 1 Cloud Engineer
+  - 2 Cloud Solutions Architects
+  - 2 Database Administrators
+
 Project and Security Management:
-  
-- 1 Scrum Master
-- 3 Security Specialists - 1 IT Project Manager
+  - 1 Scrum Master
+  - 3 Security Specialists
+  - 1 IT Project Manager
   
 ## 3. Current IT setup
 
 Let's delve into the detailed IT infrastructure of BookShow, covering aspects of hardware, software, and on-site management.
 
-**3.1 Hardware**
-
-**On-premises Servers:**
+**3.1 Hardware : On-premises Servers:**
 
 BookShow’s IT infrastructure includes several key components. The web servers host the website and application, handling user inquiries, ticket bookings, and providing web content, typically using software like Apache and Nginx. The database servers are dedicated to storing and managing transactional data, customer information, and event details, utilizing relational database management systems like SQL Server or PostgreSQL. Media servers are employed for streaming media content and storing large media files. Backup servers ensure critical data backup and data availability during power outages. In addition to other features, hardware load balancers are utilized to ensure that web traffic is evenly distributed to web servers, resulting in high availability and reliability.
 
-**3.2 Software**
-
-**Operating Systems:**
+**3.2 Software : Operating Systems:**
 
 The operating systems primarily used are Linux servers, such as Ubuntu and CentOS, chosen for their reliability and security, and deployed across web, database, and media servers. BookShow utilizes several key applications and services to ensure smooth operations. A custom ticketing platform is specialized software that manages ticket bookings, user profiles, financial transactions, and event organization. CRM (Customer Relationship Management) will manage interactions with customers, sales, and support (ProInfluent, n.d.). Content management system 'CMS', manages website content management, promotions, and advertising (Kinsta, n.d.). Integration of APIs and services with multiple payment gateways to support online transactions. Additionally, Server health and performance are monitored using monitoring tools like Nagios and Zabbix (Nagios, n.d.; Zabbix, n.d.).
 
@@ -52,9 +53,7 @@ BookShow ensures robust internet connectivity with high-bandwidth connections to
  
 **3.4 Security Components:**
 
-BookShow implements a range of security measures to secure its infrastructure.
-. Network traffic is monitored by an intrusion detection system “IDS” and an “intrusion prevention system” IPS to detect suspicious activity and prevent potential attacks (Okta, n.d.). Additionally, measures are taken to mitigate the impact of Distributed Denial of Service (DDoS) attacks to ensure
-continuous service availability.
+BookShow implements a range of security measures to secure its infrastructure. A hardware firewall is implemented to safeguard the system from external cyber threats, while a software firewall is employed to defend the network from unauthorized access. Network traffic is monitored by an intrusion detection system “IDS” and an “intrusion prevention system” IPS to detect suspicious activity and prevent potential attacks (Okta, n.d.). Additionally, measures are taken to mitigate the impact of Distributed Denial of Service (DDoS) attacks to ensure continuous service availability.
 
 **3.5 Power and Cooling:**
 
@@ -145,7 +144,7 @@ Amazon CloudWatch provides real-time monitoring for your Amazon Web Services (AW
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/0af7da39-93e1-4f04-a51f-487ffb40a157)
 
-                  Fig 2: AWS CloudWatch
+                    Fig 2: AWS CloudWatch
 
 ## 8. Recommended Solutions
 **8.1 Aspect 1: Web Hosting**
@@ -225,7 +224,7 @@ Let’s estimate the monthly spent on the current IT setup.
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/443e0caa-75f2-4916-9c8e-65d450efc4c3)
 
-    Fig 1: AWS Pricing Calculator
+                Fig 1: AWS Pricing Calculator
 
  • Cost Comparison Table:
 
@@ -239,7 +238,7 @@ Moving from local infrastructure to AWS can result in around an 82.55% yearly co
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/fee86122-72ad-4286-833c-f9b1b379f577)
 
-     Fig 2: AWS Backup Pricing calculator
+                Fig 2: AWS Backup Pricing calculator
 
 **9.4 Monitoring and Management**
 • AWS CloudWatch: AWS provides real-time monitoring system.
@@ -268,7 +267,7 @@ Let's outline and deploy a sample cloud infrastructure using AWS EC2 and CloudWa
 5.	Configure and set up an alarm in CloudWatch through the AWS console.
 6.	Validating the EC2 HTML page and CloudWatch alert notifications.
 
-**Step 1:** Launch a new EC2 instance for hosting the web application
+**Step 1: Launch a new EC2 instance for hosting the web application**
 
 1.	Login to the AWS console.
 2.	Search for the EC2 service and launch into the EC2 dashboard.
@@ -284,7 +283,7 @@ Let's outline and deploy a sample cloud infrastructure using AWS EC2 and CloudWa
 
    Fig 1: Launching a new EC2 instances
 
-**Step 2:** Securely connect to an EC2 instance via SSH using a.pem file.
+**Step 2: Securely connect to an EC2 instance via SSH using a.pem file.**
 
 Connecting EC2 via SSH, has direct access to the EC2 operating system, enabling advanced configurations, real-time troubleshooting, automation, and efficient resource management.
 
@@ -297,7 +296,7 @@ Connecting EC2 via SSH, has direct access to the EC2 operating system, enabling 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/062a449b-474a-4ff8-99da-8b91ffc79ee2)
    Fig.2: Connecting to EC2 instances via SSH
 
-**Step 3:** To host the web application, install Apache
+**Step 3: To host the web application, install Apache**
 
 Installing Apache is to prepare the EC2 instance to handle HTTP/HTTPS requests and serve content to users, which is essential for any web-based application. This allows users to access web pages and web applications hosted on the EC2 instance.
 
@@ -311,7 +310,7 @@ Installing Apache is to prepare the EC2 instance to handle HTTP/HTTPS requests a
 
              Fig.3: Installing Apache
    
-**Step 4:** Create a basic HTML file to serve
+**Step 4: Create a basic HTML file to serve**
 
 The HTML file provides a basic web page that can be viewed in a user browser, ensuring that the Apache web server is capable of delivering web content to users.
 
@@ -326,7 +325,7 @@ The "Welcome to BookShow! " message should be displayed.
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/fc1d4eef-ab91-4ffa-9fae-ad789c52256c)
    Fig 4: HTML page with Welcome message
 
-**Step 5:** Configure and set up an alarm in CloudWatch through the AWS console
+**Step 5:Configure and set up an alarm in CloudWatch through the AWS console**
              
 1. Go to the AWS Amazon console. Open the Cloud Watch dashboard.
 2. Click on ‘All Alarm’ -> Create Alarm.
@@ -356,7 +355,7 @@ The "Welcome to BookShow! " message should be displayed.
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/3cf22272-3ad8-4720-a284-531cb17492d1)
                 Fig 6: CloudWatch Dashboard with configured Alarm
 
-**Step 6:** Validating the CloudWatch alert notifications
+**Step 6: Validating the CloudWatch alert notifications**
 
 1.	Open your terminal. Connecting to your instances install the stress tool (stress tool is utilized to simulate CPU load on an EC2 instance to validate monitoring setups like CloudWatch alarms)
 sudo yum install -y stress.
