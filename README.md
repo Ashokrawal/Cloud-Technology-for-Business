@@ -207,9 +207,7 @@ Cost Efficiency:
 8.2.1 Recommendation: AWS CloudWatch
 8.2.2 Justification: AWS CloudWatch is recommended for BookShow due to its seamless integration with AWS services, automation capabilities, comprehensive metrics, and alerting features. It simplifies monitoring operations, provides real-time insights, and optimizes cost-effectiveness, which is crucial for meeting the dynamic demands of an online ticketing platform.
 
-## 9. Detail of the Costs
-Let’s estimate the monthly spent on the current IT setup.
- 
+## 9. Detail of the Costs 
 Let’s estimate the monthly spent on the current IT setup.
 
 9.1 On-Premises cost
@@ -231,8 +229,6 @@ Let’s estimate the monthly spent on the current IT setup.
 
  • Cost Comparison Table:
 
-
-
  ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/a66a9929-4910-4c8f-a8ff-387b7a407e62)
 
 Moving from local infrastructure to AWS can result in around an 82.55% yearly cost reduction for online ticketing platforms such as BookShow. This significant decrease in operational costs emphasizes the financial advantages of using AWS for such platforms.
@@ -252,99 +248,143 @@ Moving from local infrastructure to AWS can result in around an 82.55% yearly co
             Fig 3: AWS CloudWatch pricing calculator
             
 ## 10. Sample Cloud Infrastructure Deployment
-Let's outline and deploy a sample cloud infrastructure using AWS EC2 and CloudWatch,
-aligning with our recommendations.
+
+Let's outline and deploy a sample cloud infrastructure using AWS EC2 and CloudWatch, aligning with our recommendations.
+
 10.1 Pre-requisite
+
 1. Ensure you have an AWS account setup. https://signin.aws.amazon.com/.
 2. Install and configure the AWS Command Line Interface on the local machine.
-(
-)
-10.2 Steps to be Followed
-1. Launch a new EC2 instance for hosting the web application.
-2. Securely connect to an EC2 instance via SSH using a.pem file.
-3. To host the web application, install Apache.
-4. Create a basic HTML file to serve.
-5. Configure and set up an alarm in CloudWatch through the AWS console.
-6. Validating the EC2 HTML page and CloudWatch alert notifications.
-Step 1: Launch a new EC2 instance for hosting the web application
-▪ Login to the AWS console.
-▪ Search for the EC2 service and launch into the EC2 dashboard.
-▪ Click on Launch -> Launch instances.
-▪ Enter the instance ‘name’.
-▪ Choose an Amazon Machine Image (AMI) E.g., Amazon Linux 2 AMI (free tier).
-▪ Select an instance type. E.g., t2.micro (eligible for free tier).
-▪ Create a new key pair or use an existing key pair. Download and save the .pem file.
-▪ In Network settings, enable “Allow SSH traffic from” and “allow HTTP traffic from the
-internet” to access “port 22” and “port 80”.
-▪ Leave other options as defaults and launch instances.
-   The AWS CLI is a tool that allows you to control multiple AWS services from
-  the command line
+    (The AWS CLI is a tool that allows you to control multiple AWS services from
+    the command line)
 
- Fig 1: Launching a new EC2 instances Step 2: Securely connect to an EC2 instance via SSH using a.pem file.
+10.2 Steps to be Followed
+
+1.	Launch a new EC2 instance for hosting the web application.
+2.	Securely connect to an EC2 instance via SSH using a.pem file.
+3.	To host the web application, install Apache.
+4.	Create a basic HTML file to serve.
+5.	Configure and set up an alarm in CloudWatch through the AWS console.
+6.	Validating the EC2 HTML page and CloudWatch alert notifications.
+
+Step 1: Launch a new EC2 instance for hosting the web application
+
+1.	Login to the AWS console.
+2.	Search for the EC2 service and launch into the EC2 dashboard.
+3.	Click on Launch -> Launch instances.
+4.	Enter the instance ‘name’.
+5.	Choose an Amazon Machine Image (AMI) E.g., Amazon Linux 2 AMI (free tier).
+6.	Select an instance type. E.g., t2.micro (eligible for free tier).
+7.	Create a new key pair or use an existing key pair. Download and save the .pem file.
+8.	In Network settings, enable “Allow SSH traffic from” and “allow HTTP traffic from the internet” to access “port 22” and “port 80”.
+9.	Leave other options as defaults and launch instances.
+
+ ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/11169e02-00d7-4100-a985-d94de06e011a)
+
+   Fig 1: Launching a new EC2 instances
+
+Step 2: Securely connect to an EC2 instance via SSH using a.pem file.
+
 Connecting EC2 via SSH, has direct access to the EC2 operating system, enabling advanced configurations, real-time troubleshooting, automation, and efficient resource management.
-▪ Once the EC2 instance is up and running, open your terminal ▪ Navigate to the directory where your `.pem` file is saved
-▪ Connect to your EC2 instance using the below command:
-ssh -i "your-key-pair.pem" ec2-user@”your-ec2-public-DNS Example: ssh -i TestA.pem ec2-user@54.209.222.78
- 
-Fig.2: Connecting to EC2 instances via SSH Step 3: To host the web application, install Apache
+
+1.	Once the EC2 instance is up and running, open your terminal
+2.	Navigate to the directory where your `.pem` file is saved
+3.	Connect to your EC2 instance using the below command:
+  ssh -i "your-key-pair.pem" ec2-user@”your-ec2-public-DNS 
+  Example: ssh -i TestA.pem ec2-user@54.209.222.78
+
+![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/062a449b-474a-4ff8-99da-8b91ffc79ee2)
+   Fig.2: Connecting to EC2 instances via SSH
+
+Step 3: To host the web application, install Apache
+
 Installing Apache is to prepare the EC2 instance to handle HTTP/HTTPS requests and serve content to users, which is essential for any web-based application. This allows users to access web pages and web applications hosted on the EC2 instance.
-▪ Execute the below commands one by one to install and configure Apache. sudo yum update -y
-sudo yum install -y httpd sudo systemctl start httpd sudo systemctl enable httpd
-Fig.3: Installing Apache Step 4: Create a basic HTML file to serve
-The HTML file provides a basic web page that can be viewed in a user browser, ensuring that the Apache web server is capable of delivering web content to users.
-▪ Once Apache is installed, create a simple HTML file. Run the below command. echo "<html><h1>Welcome to BookShow!</h1></html>" | sudo
-tee /var/www/html/index.html
-▪ Validating Web browser:
-To verify your web browser, navigate to http://your-ec2-public-ip. Example: http:// 52.87.221.177
-The "Welcome to BookShow! " message should be displayed.
+
+1.	Execute the below commands one by one to install and configure Apache.
+        sudo yum update -y
+        sudo yum install -y httpd
+        sudo systemctl start httpd
+        sudo systemctl enable httpd
+
+![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/8e2d0e60-7eb9-4576-bbcc-247db846e1bc)
+
+             Fig.3: Installing Apache
    
- Fig 4: HTML page with Welcome message
+Step 4: Create a basic HTML file to serve
+
+The HTML file provides a basic web page that can be viewed in a user browser, ensuring that the Apache web server is capable of delivering web content to users.
+
+1.	Once Apache is installed, create a simple HTML file. Run the below command.
+      echo "<html><h1>Welcome to BookShow!</h1></html>" |  sudo 
+      tee /var/www/html/index.html
+
+2.	Validating Web browser: 
+To verify your web browser, navigate to http://your-ec2-public-ip. 
+Example: http:// 52.87.221.177 
+The "Welcome to BookShow! " message should be displayed.
+
+![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/fc1d4eef-ab91-4ffa-9fae-ad789c52256c)
+   Fig 4: HTML page with Welcome message
+
 Step 5: Configure and set up an alarm in CloudWatch through the AWS console
-▪ Go to the AWS Amazon console. Open the Cloud Watch dashboard.
-▪ Click on ‘All Alarm’ -> Create Alarm.
-▪ Select Metrics. On the following page, Select “EC2“ under the browse tab.
-▪ Select “per-instance metrics”. Running instance lists will be displayed.
-▪ From the list “CPUUtilization” that we want to monitor. Click on Select Metrics.
-▪ On the Metrics and conditions page,
--Period: Select the evaluation period, for example, "5 minutes". This specifies how often -CloudWatch checks the metrics.
--Select the threshold type as “Static”.
--Select “Whenever CPUUtilization is.” as “Greater than or equal to”.
--Threshold: Set a value, for example, "50".This means the alarm will trigger if the
--CPU utilization is 50% or higher.
-▪ Click on next to config the alarm (to specify what action to take when the alarm state is
-triggered)
--Notification: Select "In alarm"
--Send a notification to: Create a new topic, to receive email/SMS notifications. -Add a name for the SNS topic.
--Add an email address to receive the alert notifications.
--Click on Create Topic and click on next
- 
- Fig 5: Configuring notification alert in CloudWatch
-▪ In the "Add name and description" page, provide a name for the alarm. (e.g., "High CPU Utilization Alarm") and add a description (optional).
-▪ Review the alarm configuration and click on Create alarm.
-▪ Confirm the SNS subscription which is received in the configured Email.
-Fig 6: CloudWatch Dashboard with configured Alarm Step 6: Validating the CloudWatch alert notifications
-▪ Open your terminal. Connecting to your instances install the stress tool (stress tool is utilized to simulate CPU load on an EC2 instance to validate monitoring setups like CloudWatch alarms)
+             
+1. Go to the AWS Amazon console. Open the Cloud Watch dashboard.
+2. Click on ‘All Alarm’ -> Create Alarm.
+3. Select Metrics. On the following page, Select “EC2“ under the browse tab.
+4. Select “per-instance metrics”. Running instance lists will be displayed.
+5. From the list “CPUUtilization” that we want to monitor. Click on Select Metrics.
+6. On the Metrics and conditions page,
+   -Period: Select the evaluation period, for example, "5 minutes". This specifies how often  -CloudWatch checks the metrics.
+   -Select the threshold type as “Static”.
+   -Select “Whenever CPUUtilization is.” as “Greater than or equal to”.
+   -Threshold: Set a value, for example, "50".This means the alarm will trigger if the
+   -CPU utilization is 50% or higher.
+7. Click on next to config the alarm (to specify what action to take when the alarm state is  triggered)
+   -Notification: Select "In alarm"
+   -Send a notification to: Create a new topic, to receive email/SMS notifications.
+   -Add a name for the SNS topic.
+   -Add an email address to receive the alert notifications.
+   -Click on Create Topic and click on next
+
+   ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/aa77fa9c-c8b0-42ab-bca1-56aa0157905f)
+                    Fig 5: Configuring notification alert in CloudWatch
+
+8.	In the "Add name and description" page, provide a name for the alarm. (e.g., "High CPU Utilization Alarm") and add a description (optional).
+9.	Review the alarm configuration and click on Create alarm.
+10.	Confirm the SNS subscription which is received in the configured Email.
+
+![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/3cf22272-3ad8-4720-a284-531cb17492d1)
+                Fig 6: CloudWatch Dashboard with configured Alarm
+
+Step 6: Validating the CloudWatch alert notifications
+
+1.	Open your terminal. Connecting to your instances install the stress tool (stress tool is utilized to simulate CPU load on an EC2 instance to validate monitoring setups like CloudWatch alarms)
 sudo yum install -y stress.
-▪ After installing the stress tool, to simulate the CPU usage run the following command. Stress --cpu 4--timeout 300 (Example to stress 4 CPUs for 5 minutes (300 seconds)).
- 
-▪ Verify the CloudWatch dashboard. Email alert notification should be received for the mentioned email when CPU usage is more than 50%
-Fig 7: CloudWatch Dashboard after simulating the CPU usage
-Fig 8: SNS Alarm notification when EC2 CPU utilization is more than set threshold.
+2.	After installing the stress tool, to simulate the CPU usage run the following command.        Stress --cpu 4--timeout 300  (Example to stress 4 CPUs for 5 minutes (300 seconds)).
+3.	Verify the CloudWatch dashboard. Email alert notification should be received for the mentioned email when CPU usage is more than 50%
+
+![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/e3e715de-3529-42c0-93ed-b333cd928740)
+                 Fig 7: CloudWatch Dashboard after simulating the CPU usage
+
+![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/28a4bfec-ea50-49ce-8751-be109a9e65d3)
+                 Fig 8: SNS Alarm notification when EC2 CPU utilization is more than set threshold
+                 
 We have now deployed a simple cloud infrastructure using EC2 and CloudWatch.When the CPU utilization exceeds the specified threshold in the EC2, CloudWatch will trigger the alarm and send a notification via SNS to the specified E-mail recipient. This approach helps ensure you can quickly respond to high CPU usage alerts and maintain the performance of your EC2 instances.
-  
-10.3 Architectural representation of Sample deployment
+
+## 10.3 Architectural representation of Sample deployment
+
+![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/0e574dd8-7e37-4d8b-8da5-c57348893970)
+
 ▪ The Users accesses the HTML web application hosted on the EC2 instance.
 ▪ AWS EC2 Instance hosts the web application and Apache web server.
 ▪ CloudWatch: Monitors the EC2 instance. Checks network traffic /CPU Utilization
 and triggers alarms when CPU Utilization reaches the threshold.
 ▪ SNS Topic: Sends alert notifications (e.g., email) to admin when alarms are triggered.
-11. Use of GitHub/GitLab
-• GitHub link for the project documentation.
-Ashokrawal/Cloud-Technology-for-Business: Module Code: B9MG119 (github.com)
-12. Conclusion
+
+## 12. Conclusion
 Transitioning BookShow's IT infrastructure to AWS cloud services brought significant benefits. It solves today's challenges such as high costs, scalability issues, frequent downtime, security vulnerabilities, and ineffective monitoring. AWS EC2 provides flexible, cost-effective scalability, reliability, and improved security compared to on-premises solutions.AWS CloudWatch provides real-time monitoring and proactive alerting needed to maintain optimal performance. BookShow's strategic transformation not only addresses the problems it currently faces but also meets its growth needs, improving operational efficiency, customer satisfaction, and competitive edge in the market.
     
-13. References
+## 13. References
 • Microsoft Azure, n.d. What is cloud computing? [online] Available at: https://azure.microsoft.com/en-in/resources/cloud-computing-dictionary/what-is-cloud- computing/ [Accessed 29 June 2024].
 • Amazon Web Services (2023). AWS Overview. Available at: https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html (Accessed: 30 June 2024).
 • Amazon Web Services (2024). What is Amazon CloudWatch?. Available at: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch. html (Accessed: 30 June 2024).
