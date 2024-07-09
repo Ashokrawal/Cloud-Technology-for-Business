@@ -136,14 +136,16 @@ Amazon Web Services (AWS) offers IT infrastructure services to businesses as web
 Amazon Elastic Compute Cloud (Amazon EC2) is a service provided by Amazon Web Services (AWS) that offers flexible and scalable computing capacity. It helps in minimizing hardware expenses and enables quick development and deployment of applications. Amazon EC2 allows users to launch and manage virtual servers according to their requirements, and adjust capacity to handle varying workloads. Moreover, an EC2 instance refers to a virtual server in the AWS Cloud, with specific hardware configurations based on the chosen instance type (Amazon Web Services, n.d.).
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/198530fa-1ac9-454b-a214-baffc8098b42)
- Fig 1: AWS EC2
+ 
+                     Fig 1: AWS EC2
  
  7.2.2 What is AWS CloudWatch?
  
 Amazon CloudWatch provides real-time monitoring for your Amazon Web Services (AWS) resources and applications. You can track and collect metrics, which are measurable variables, and create custom dashboards to display them. Additionally, you can set up alarms and receive notifications or automate actions when certain thresholds are reached. This helps you gain insight into resource utilization, application performance, and operational health (Amazon Web Services, n.d.).
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/0af7da39-93e1-4f04-a51f-487ffb40a157)
-Fig 2: AWS CloudWatch
+
+                  Fig 2: AWS CloudWatch
 
 ## 8. Recommended Solutions
 8.1 Aspect 1: Web Hosting
@@ -178,69 +180,78 @@ Security and Compliance :
 
 8.2 Aspect 2: Monitoring System
 
-To address the challenge of slow response to server issues and lack of real-time insights, we can implement AWS CloudWatch. Traditional monitoring tools may not check systems often enough, which could cause delays in identifying serious server slowdowns or errors. This can lead to a poor customer experience, especially during busy ticketing periods. For example, they could fail to notice unexpected increases in CPU usage or memory issues until the next planned inspection, affecting the booking process and causing frustration to customers due to slow response times or transaction failures. Let's compare AWS Cloudwatch with a traditional monitoring system.
-Comparative Analysis
+To address the challenge of slow response to server issues and lack of real-time insights, we can implement AWS CloudWatch. Traditional monitoring tools may not check systems often enough, which could cause delays in identifying serious server slowdowns or errors. This can lead to a poor customer experience, especially during busy ticketing periods. For example, they could fail to notice unexpected increases in CPU usage or memory issues until the next planned inspection, affecting the booking process and causing frustration to customers due to slow response times or transaction failures. Let's compare AWS Cloudwatch with a Traditional monitoring system (Nagios, Zabbix).
 
-## Features
+Comparative Analysis :
 
-   AWS CloudWatch
-   Traditional monitoring system (Nagios, Zabbix)
-   Automation and Scalability
- AWS CloudWatch provides the ability to automatically adjust the capacity of resources according to specific measurements and limits. This could involve tasks such as modifying the size of EC2 instances and is essential for managing fluctuations in demand and improving the efficient use of resources.
-   Usually, they use manual setup and scripting to scale or automate actions. They may lack built-in support for cloud-based services or auto-scaling features without making additional customizations.
-   Metrics and Dashboards
-Provides built-in metrics and customizable dashboards that offer real-time visibility into performance metrics such as CPU utilization, memory usage, and network traffic. These dashboards can be tailored to display key metrics relevant to BookShow-specific applications and services.
-   Require more manual setup to configure dashboards and collect metrics from various servers and applications. They may not offer as extensive or integrated dashboard capabilities.
- 
-   Alerting and Notifications
-  Enables customizable alerts based on predefined thresholds for metrics. It can send notifications via email, and SMS, or trigger automated actions through AWS services like SNS (Simple Notification Service). This ensures timely responses to performance issues or anomalies.
-    Offer alerting capabilities but may require more manual setup for defining alerts and integrating with external notification systems. They may lack seamless integration with AWS services for automated responses.
-   Integration and Security Compliance
-AWS CloudWatch effectively automates the process of ensuring security settings compliance by integrating closely with various AWS services. This service is managed, offering strong security management for scalable cloud environments without incurring high operational expenses.
-  Conventional monitoring tools often need manual setup and don't integrate smoothly with cloud services, leading to scaling problems and higher maintenance expenses. They often need users to handle security updates on their own and may not be able to match the speed and automation of cloud- native solutions like CloudWatch.
-   Cost Efficiency
- Operates on a pay-as-you-go model, where a company pays for the metrics and logs ingested, along with any additional features used like custom dashboards or enhanced monitoring capabilities. This aligns costs with actual usage and can be more cost- effective for dynamic workloads (AWS, n.d.).
-    Often involve upfront costs for licenses and hardware, along with ongoing maintenance expenses. Scaling traditional tools to accommodate growth or sudden increases in monitoring requirements may incur additional costs and resource allocation.
- 8.2.1 Recommendation: AWS CloudWatch
-8.2.2 Justification: AWS CloudWatch is recommended for BookShow due to its seamless integration with AWS services, automation capabilities, comprehensive metrics, and alerting features. It simplifies monitoring operations, provides real-time insights, and optimizes cost- effectiveness, which is crucial for meeting the dynamic demands of an online ticketing platform.
-9. Detail of the Costs
+Automation and Scalability :
+1. AWS CloudWatch provides the ability to automatically adjust the capacity of resources according to specific measurements and limits. This could involve tasks such as modifying the size of EC2 instances and is essential for managing fluctuations in demand and improving the efficient use of resources.
+2. Traditional Monitoring system , use manual setup and scripting to scale or automate actions. They may lack built-in support for cloud-based services or auto-scaling features without making additional customizations.
+   
+Metrics and Dashboards :
+1. AWS Cloudwatch provides built-in metrics and customizable dashboards that offer real-time visibility into performance metrics such as CPU utilization, memory usage, and network traffic. These dashboards can be tailored to display key metrics relevant to BookShow-specific applications and services.
+2. Traditional Monitoring system ,require more manual setup to configure dashboards and collect metrics from various servers and applications. They may not offer as extensive or integrated dashboard capabilities.
+   
+Alerting and Notifications :
+1. AWS Cloudwatch enables customizable alerts based on predefined thresholds for metrics. It can send notifications via email, and SMS, or trigger automated actions through AWS services like SNS (Simple Notification Service). This ensures timely responses to performance issues or anomalies.
+2. Traditional Monitoring system offer alerting capabilities but may require more manual setup for defining alerts and integrating with external notification systems. They may lack seamless integration with AWS services for automated responses.
+   
+Integration and Security Compliance :
+1. AWS CloudWatch effectively automates the process of ensuring security settings compliance by integrating closely with various AWS services. This service is managed, offering strong security management for scalable cloud environments without incurring high operational expenses.
+2. Conventional monitoring tools often need manual setup and don't integrate smoothly with cloud services, leading to scaling problems and higher maintenance expenses. They often need users to handle security updates on their own and may not be able to match the speed and automation of cloud-native solutions like CloudWatch.
+   
+Cost Efficiency:
+1. AWS cloudwatch ,operates on a pay-as-you-go model, where a company pays for the metrics and logs ingested, along with any additional features used like custom dashboards or enhanced monitoring capabilities. This aligns costs with actual usage and can be more cost-effective for dynamic workloads (AWS, n.d.).
+2. Traditional Monitoring system ,often involve upfront costs for licenses and hardware, along with ongoing maintenance expenses. Scaling traditional tools to accommodate growth or sudden increases in monitoring requirements may incur additional costs and resource allocation.
+
+8.2.1 Recommendation: AWS CloudWatch
+8.2.2 Justification: AWS CloudWatch is recommended for BookShow due to its seamless integration with AWS services, automation capabilities, comprehensive metrics, and alerting features. It simplifies monitoring operations, provides real-time insights, and optimizes cost-effectiveness, which is crucial for meeting the dynamic demands of an online ticketing platform.
+
+## 9. Detail of the Costs
 Let’s estimate the monthly spent on the current IT setup.
  
-9.1
-On-Premises cost
-•
-1. 2. • 3. 4.
+Let’s estimate the monthly spent on the current IT setup.
+
+9.1 On-Premises cost
+
+•	Capital Expenditures (CapEx): CapEx refers to the one-time costs associated with acquiring physical assets.
+1.	 Let’s assume the total CapEX, covering physical Servers, network equipment, storage device, backup system, and load balancer, is approximately $72,000.
+2.	 The total Software costs, including Operating system, Software, and database licenses, and other software applications, amount to around $20,000.
+•	Operational Expenditures (OpEx): OpEx refers to the recurring costs for maintaining and operating the assets.
+3.	The total OpEx cost of IT staff salaries, maintenance, and power & cooling is
+ approximately  $75,000 per year.
+4.	Total cost including CapEx (One-time) +OpEx (annually) = $92,000+$75,000= $1,67,000.
+
 9.2 AWS Costs
-• Estimated Monthly Costs on Cloud services which includes AWS EC2 and AWS CloudWatch: Approximately $1,090.39 per month and $13,084 Per Annum.
-Capital Expenditures (CapEx): CapEx refers to the one-time costs associated with acquiring physical assets.
-Let’s assume the total CapEX, covering physical Servers, network equipment, storage device, backup system, and load balancer, is approximately $72,000.
-The total Software costs, including Operating system, Software, and database licenses, and other software applications, amount to around $20,000.
-Operational Expenditures (OpEx): OpEx refers to the recurring costs for maintaining and operating the assets.
-The total OpEx cost of IT staff salaries, maintenance, and power & cooling is approximately $75,000 per year.
-Total cost including CapEx (One-time) +OpEx (annually) = $92,000+$75,000=
-$1,67,000.
+•	Estimated Monthly Costs on Cloud services which includes AWS EC2 and AWS CloudWatch: Approximately $1,090.39 per month and $13,084 Per Annum.
+
+![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/443e0caa-75f2-4916-9c8e-65d450efc4c3)
+
+    Fig 1: AWS Pricing Calculator
+
  • Cost Comparison Table:
-CapEx (One-time) Software (One-time) OpEx (Annual) AWS EC2
-AWS CloudWatch Total
-Fig 1: AWS Pricing Calculator
-$72,000 N/A $20,000 N/A $75,000 N/A
-N/A $8,723.28 N/A $4,361.40 $1,67,000 $13,084.68
-  Category
-   On-Premises Cost
-   AWS COST
-                   
+
+
+
+ ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/a66a9929-4910-4c8f-a8ff-387b7a407e62)
+
 Moving from local infrastructure to AWS can result in around an 82.55% yearly cost reduction for online ticketing platforms such as BookShow. This significant decrease in operational costs emphasizes the financial advantages of using AWS for such platforms.
+
 9.3 Options for Backup
 • AWS Backup: AWS provides automated backup options.
 • Note: AWS backup pricing service is temporarily disabled
-Fig 2: AWS Backup Pricing calculator
+
+![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/fee86122-72ad-4286-833c-f9b1b379f577)
+
+     Fig 2: AWS Backup Pricing calculator
+
 9.4 Monitoring and Management
 • AWS CloudWatch: AWS provides real-time monitoring system.
-• Estimated Monthly Costs on Cloud services which includes AWS CloudWatch is
-Approximately $363.45 per month and $4,361.40 Per Annum.
-  
-Fig 3: AWS CloudWatch pricing calculator
-10. Sample Cloud Infrastructure Deployment
+• Estimated Monthly Costs on Cloud services which includes AWS CloudWatch is approximately $363.45 per month and $4,361.40 Per Annum.
+  ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/7c9b5d53-5c5c-4217-a0cb-075901d1601d)
+            Fig 3: AWS CloudWatch pricing calculator
+            
+## 10. Sample Cloud Infrastructure Deployment
 Let's outline and deploy a sample cloud infrastructure using AWS EC2 and CloudWatch,
 aligning with our recommendations.
 10.1 Pre-requisite
