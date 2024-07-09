@@ -204,6 +204,7 @@ To address the challenge of slow response to server issues and lack of real-time
 2. Traditional Monitoring system ,often involve upfront costs for licenses and hardware, along with ongoing maintenance expenses. Scaling traditional tools to accommodate growth or sudden increases in monitoring requirements may incur additional costs and resource allocation.
 
 **8.2.1 Recommendation: AWS CloudWatch**
+
 **8.2.2 Justification:** AWS CloudWatch is recommended for BookShow due to its seamless integration with AWS services, automation capabilities, comprehensive metrics, and alerting features. It simplifies monitoring operations, provides real-time insights, and optimizes cost-effectiveness, which is crucial for meeting the dynamic demands of an online ticketing platform.
 
 ## 9. Detail of the Costs 
@@ -212,35 +213,42 @@ Let’s estimate the monthly spent on the current IT setup.
 **9.1 On-Premises cost**
 
 **•	Capital Expenditures (CapEx):** CapEx refers to the one-time costs associated with acquiring physical assets.
+
 1.	 Let’s assume the total CapEX, covering physical Servers, network equipment, storage device, backup system, and load balancer, is approximately $72,000.
+
 2.	 The total Software costs, including Operating system, Software, and database licenses, and other software applications, amount to around $20,000.
+
 **•	Operational Expenditures (OpEx):** OpEx refers to the recurring costs for maintaining and operating the assets.
-3.	The total OpEx cost of IT staff salaries, maintenance, and power & cooling is
- approximately  $75,000 per year.
-4.	Total cost including CapEx (One-time) +OpEx (annually) = $92,000+$75,000= $1,67,000.
+
+3.	The total OpEx cost of IT staff salaries, maintenance, and power & cooling is approximately  $75,000 per year.
+
+4.	Total cost including CapEx (One-time) +OpEx (annually) = $92,000+$75,000= **$1,67,000.**
 
 **9.2 AWS Costs**
+
 •	Estimated Monthly Costs on Cloud services which includes AWS EC2 and AWS CloudWatch: Approximately $1,090.39 per month and $13,084 Per Annum.
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/443e0caa-75f2-4916-9c8e-65d450efc4c3)
 
                 Fig 1: AWS Pricing Calculator
 
- • Cost Comparison Table:
+ **• Cost Comparison Table:**
 
  ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/a66a9929-4910-4c8f-a8ff-387b7a407e62)
 
 Moving from local infrastructure to AWS can result in around an 82.55% yearly cost reduction for online ticketing platforms such as BookShow. This significant decrease in operational costs emphasizes the financial advantages of using AWS for such platforms.
 
 **9.3 Options for Backup**
+
 • AWS Backup: AWS provides automated backup options.
 • Note: AWS backup pricing service is temporarily disabled
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/fee86122-72ad-4286-833c-f9b1b379f577)
 
-                Fig 2: AWS Backup Pricing calculator
+                  Fig 2: AWS Backup Pricing calculator
 
 **9.4 Monitoring and Management**
+
 • AWS CloudWatch: AWS provides real-time monitoring system.
 • Estimated Monthly Costs on Cloud services which includes AWS CloudWatch is approximately $363.45 per month and $4,361.40 Per Annum.
   ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/7c9b5d53-5c5c-4217-a0cb-075901d1601d)
@@ -281,7 +289,7 @@ Let's outline and deploy a sample cloud infrastructure using AWS EC2 and CloudWa
 
  ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/11169e02-00d7-4100-a985-d94de06e011a)
 
-   Fig 1: Launching a new EC2 instances
+                   Fig 1: Launching a new EC2 instances
 
 **Step 2: Securely connect to an EC2 instance via SSH using a.pem file.**
 
@@ -294,7 +302,8 @@ Connecting EC2 via SSH, has direct access to the EC2 operating system, enabling 
   Example: ssh -i TestA.pem ec2-user@54.209.222.78
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/062a449b-474a-4ff8-99da-8b91ffc79ee2)
-   Fig.2: Connecting to EC2 instances via SSH
+  
+                  Fig.2: Connecting to EC2 instances via SSH
 
 **Step 3: To host the web application, install Apache**
 
@@ -308,22 +317,21 @@ Installing Apache is to prepare the EC2 instance to handle HTTP/HTTPS requests a
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/8e2d0e60-7eb9-4576-bbcc-247db846e1bc)
 
-             Fig.3: Installing Apache
+                     Fig.3: Installing Apache
    
 **Step 4: Create a basic HTML file to serve**
 
 The HTML file provides a basic web page that can be viewed in a user browser, ensuring that the Apache web server is capable of delivering web content to users.
 
-1.	Once Apache is installed, create a simple HTML file. Run the below command.
-      echo "<html><h1>Welcome to BookShow!</h1></html>" |  sudo 
-      tee /var/www/html/index.html
+1.	Once Apache is installed, create a simple HTML file to serve
 2.	Validating Web browser: 
 To verify your web browser, navigate to http://your-ec2-public-ip. 
 Example: http:// 52.87.221.177 
-The "Welcome to BookShow! " message should be displayed.
+3.The "Welcome to BookShow! " message should be displayed.
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/fc1d4eef-ab91-4ffa-9fae-ad789c52256c)
-   Fig 4: HTML page with Welcome message
+ 
+                     Fig 4: HTML page with Welcome message
 
 **Step 5:Configure and set up an alarm in CloudWatch through the AWS console**
              
@@ -343,30 +351,34 @@ The "Welcome to BookShow! " message should be displayed.
    -Send a notification to: Create a new topic, to receive email/SMS notifications.
    -Add a name for the SNS topic.
    -Add an email address to receive the alert notifications.
-   -Click on Create Topic and click on next
+   -Click on Create Topic and click on next.
 
    ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/aa77fa9c-c8b0-42ab-bca1-56aa0157905f)
-                    Fig 5: Configuring notification alert in CloudWatch
+                    
+                       Fig 5: Configuring notification alert in CloudWatch
 
 8.	In the "Add name and description" page, provide a name for the alarm. (e.g., "High CPU Utilization Alarm") and add a description (optional).
 9.	Review the alarm configuration and click on Create alarm.
 10.	Confirm the SNS subscription which is received in the configured Email.
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/3cf22272-3ad8-4720-a284-531cb17492d1)
-                Fig 6: CloudWatch Dashboard with configured Alarm
+               
+                          Fig 6: CloudWatch Dashboard with configured Alarm
 
 **Step 6: Validating the CloudWatch alert notifications**
 
 1.	Open your terminal. Connecting to your instances install the stress tool (stress tool is utilized to simulate CPU load on an EC2 instance to validate monitoring setups like CloudWatch alarms)
 sudo yum install -y stress.
 2.	After installing the stress tool, to simulate the CPU usage run the following command.        Stress --cpu 4--timeout 300  (Example to stress 4 CPUs for 5 minutes (300 seconds)).
-3.	Verify the CloudWatch dashboard. Email alert notification should be received for the mentioned email when CPU usage is more than 50%
+3.	Verify the CloudWatch dashboard. Email alert notification should be received for the mentioned email when CPU usage is more than 50%.
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/e3e715de-3529-42c0-93ed-b333cd928740)
-                 Fig 7: CloudWatch Dashboard after simulating the CPU usage
+               
+                         Fig 7: CloudWatch Dashboard after simulating the CPU usage
 
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/28a4bfec-ea50-49ce-8751-be109a9e65d3)
-                 Fig 8: SNS Alarm notification when EC2 CPU utilization is more than set threshold
+                
+                         Fig 8: SNS Alarm notification when EC2 CPU utilization is more than set threshold
                  
 We have now deployed a simple cloud infrastructure using EC2 and CloudWatch.When the CPU utilization exceeds the specified threshold in the EC2, CloudWatch will trigger the alarm and send a notification via SNS to the specified E-mail recipient. This approach helps ensure you can quickly respond to high CPU usage alerts and maintain the performance of your EC2 instances.
 
@@ -375,9 +387,12 @@ We have now deployed a simple cloud infrastructure using EC2 and CloudWatch.When
 ![image](https://github.com/Ashokrawal/Cloud-Technology-for-Business/assets/169262551/0e574dd8-7e37-4d8b-8da5-c57348893970)
 
 ▪ **The Users** accesses the HTML web application hosted on the EC2 instance.
+
 ▪ **AWS EC2** Instance hosts the web application and Apache web server.
+
 ▪ **CloudWatch** Monitors the EC2 instance. Checks network traffic /CPU Utilization
 and triggers alarms when CPU Utilization reaches the threshold.
+
 ▪ **SNS Topic** Sends alert notifications (e.g., email) to admin when alarms are triggered.
 
 ## 12. Conclusion
@@ -410,4 +425,4 @@ Transitioning BookShow's IT infrastructure to AWS cloud services brought signifi
 
 • Zabbix (n.d.) Zabbix Monitoring Solution. Available at: https://www.zabbix.com/ (Accessed: 29 June 2024).
 
-• Intro and Demonstration [Video]. YouTube. https://www.youtube.com/watch?v=aXMih9jQIec&t=2s
+• Intro and Demonstration [Video]. YouTube. https://www.youtube.com/watch?v=aXMih9jQIec&t=2s.
